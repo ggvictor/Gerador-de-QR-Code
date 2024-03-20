@@ -1,0 +1,81 @@
+@charset "utf-8";
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Roboto;
+}
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: #34db7a;
+}
+/* container */
+.container{
+    background-color: white;
+    height: 260px;
+    width: 400px;
+    border-radius: 10px;
+    padding: 20px;
+    transition: .2s;
+}
+.container.active{
+    height: 500px;
+}
+/* header */
+#qr-header{
+    text-align: center;
+}
+#qr-header h1{
+    font-size: 1.8rem;
+    font-weight: bolder;
+    margin: 11px;
+}
+#qr-header p{
+    color:#444;
+    font-size: .9rem;
+}
+/* form */
+#qr-form{
+    margin: 20px 15px;
+}
+#qr-form input,#qr-form button{
+    width: 100%;
+    height: 55px;
+    border: none;
+    border-radius: 5px;
+    font-size: .9rem;
+}
+#qr-form input{
+    border: 1px solid #777;
+    padding: 10px 15px;
+}
+#qr-form button{
+    background-color: #086824;
+    color: white;
+    cursor: pointer;
+    font-size: 1.2rem;
+    margin-top: 20px;
+    opacity: 0.9  ;
+    transition: .4s;
+}
+#qr-form button:hover{
+    opacity: 1;
+}
+/* qr code */
+#qr-code{
+    display: flex;
+    opacity: 0;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #ccc;
+    padding: 30px 0;
+    margin: 20px 15px;
+    border-radius: 5px;
+    transition: 0.5s;
+}
+.container.active #qr-code{
+    opacity: 1;
+}
